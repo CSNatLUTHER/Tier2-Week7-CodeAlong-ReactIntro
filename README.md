@@ -1,3 +1,70 @@
+REACT INTO APP
+===
+
+PHASE 1: CREATE AND SETUP
+---
+ - run ```npx create-react-app APP-NAME``` in terminal
+ - empty README.md (update with project decription)
+ - cd into project folder and run ```npm start```
+ - go into src/App.js and update the initial DOM content
+ - create _template folder and _template.jsx
+ - add following code to _template.jsx"
+        ```
+            // importing just "useState from the 'react' package"
+            import { useState } from 'react';
+            function _template() {
+                // const [name, setName] = useState( null );
+                return(
+                    <div>
+                        <h1>_template</h1>
+                    </div>
+                )
+            }       
+            export default _template
+        ```
+
+ - duplicate _template folder and rename to "Body"
+ - rename jsx file to "Body" too
+ - in Body.jsx, find and replate _template with "Body"
+ - same for "Footer"
+ - import body and footer on App.js file
+        ```
+            import Body from './Body/Body';
+            import Footer from './Footer/Footer';
+        ```
+
+ - Mount Body and Footer to the DOM on the App.js file below the ```<header>```
+        ```
+            <Body />
+            <Footer />
+        ```
+ - create clicks variable and it's setter (copy from template comment);
+        ```
+            function Body() {
+                // const [name, setName] = useState( null );
+                const [clicks, setClicks] = useState( 0 ); // replace name(s) and set initial Value
+                const handleClick = ()=>{
+                    console.log( 'in handleClick');
+                    setClicks( clicks + 1);
+                }
+                return(
+                    <div>
+                        <h1>THIS IS THE BODY</h1>
+                        <p>Hello World from the Body Components</p>
+                        <button onClick={ handleClick }>Clicker</button>
+                        <p>Clicks: { clicks }</p>
+                    </div>
+                )
+            }
+
+        ```
+
+PHASE 3: TEXT IN FOOTER
+---
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
