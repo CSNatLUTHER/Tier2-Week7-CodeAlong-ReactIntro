@@ -10,10 +10,10 @@ function Footer() {
     }
 
     return(
-        <div>
+        <div className="App-footer">
             <h1>THIS IS THE FOOTER</h1>
             <input type="text" placeholder="type something..." onChange={ (event) => handleChange (event) }/>
-            <p>You typed: { typedString }</p>
+            <div id="textTyped"><p>You typed: { typedString }</p></div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 // imports make resources available to this component
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './Header/Header';
 import Body from './Body/Body';
 import Footer from './Footer/Footer';
 
@@ -9,22 +10,8 @@ function App() {
   // components return JSX ( similar to HTML ), which is what is shown on the DOM
   return (
     // use "className" instead of "class"
-    <div className="App">
-      <header className="App-header">
-        {/* {logo} is an example of an express  - see import logo from './logo.svg' */}
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          HELLO WORLD!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
       <Body />
       <Footer />
     </div>

@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 40vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+.BodyDiv{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 100%;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+#textTyped{
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  word-wrap: normal;
+}
+
+#newestLogo{
+  width: 200px;
+  height: 200px;
 }
