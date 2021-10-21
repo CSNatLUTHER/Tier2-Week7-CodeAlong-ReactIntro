@@ -1,5 +1,7 @@
 // importing just "useState from the 'react' package"
 import { useState } from 'react';
+import ImageItem from '../ImageItem/ImageItem'
+import ItemList from '../ItemList/ItemList';
 // import { logo } from './images/logo.svg';
 
 function Body() {
@@ -18,11 +20,18 @@ function Body() {
         console.log( 'in handleClick');
         setClicks( clicks + 1);
     }
-    const[showImage, setShowImage]=useState( false );
+    const[showImage, setShowImage]=useState( true );
     
     const toggleImage = ()=> {
         setShowImage( !showImage )
     }
+    const [picture,  SetPicture]=useState(
+        [
+            {
+                location: 'images/logo.svg',
+                altText: 'The picture'
+            }
+        ])
     return(
         <div className="BodyDiv">
             <h1>Check out my Website:</h1>
@@ -36,6 +45,7 @@ function Body() {
             <img src={ image.url} alt={image.altText} id="newestLogo" onClick = {toggleImage}/>: //true
             <h2 onClick = {toggleImage}>{ image.altText} </h2> // if FALSE
             }
+            <ItemList  picturesArray= { picture }/>
         </div>
     )
 }
